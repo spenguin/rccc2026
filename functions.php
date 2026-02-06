@@ -22,9 +22,10 @@ define( 'CORE_VENDOR', CORE_PATH . 'vendor/' );
 define( 'CORE_DIST', CORE_URL . '/js/dist/' );
 define( 'CORE_JS', CORE_URL . '/js/' );
 
-require_once CORE_INC . 'blank-slate.php';
-require_once CORE_INC . 'custom-posts.php';
-require_once CORE_INC . 'shortcodes.php';
+require_once CORE_INC . 'BlankSlate.php';
+// require_once CORE_INC . 'custom-posts.php';
+require_once CORE_INC . 'Shortcodes.php';
+require_once CORE_INC . 'tools.php'; 
 
 
 
