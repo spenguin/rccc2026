@@ -11,10 +11,9 @@ function headerText( $atts = [], $content = null, $tag = '' )
                 <img src="<?php echo CORE_TEMPLATE_URL; ?>/assets/furniture/HeaderBackgroundImage.png" alt="Rain City Comicon 2026" />
             </div>
             <div class="logo__text">
-                <h1>Rain City Comicon 2026</h1>
+                <h1><?php echo $content; ?></h1>
             </div>
         </div>
-
     <?php
     
 }

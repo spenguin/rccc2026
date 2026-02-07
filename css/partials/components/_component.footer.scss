@@ -1,0 +1,26 @@
+/** Footer styles */
+.footer {
+    background-color: black;
+    padding: 1.5rem 5%;
+    color: $paleYellow;
+    &--wrapper {
+        @include screen-greater-than(tablet) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    #copyright {
+        margin-bottom: 2rem;
+    }
+    .social-media {
+        a {
+            font-size: 1rem;
+            color: $paleYellow;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            &:hover {
+                color: $yellowSun;
+            }
+        }
+    }
+}
