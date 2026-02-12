@@ -330,6 +330,30 @@ p {
   line-height: 1.5rem;
 }
 
+/** List styles */
+ul {
+  margin-bottom: 1.25rem;
+}
+ul li {
+  font-size: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+
+/** Button styles */
+.btn {
+  text-decoration: none;
+  text-decoration: navajowhite;
+  padding: 2px 5px;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+.btn__buy-now {
+  color: black;
+}
+.btn__buy-now:hover {
+  background-color: #f6cb43;
+}
+
 /** Components Aggregator */
 /** Footer styles */
 .footer {

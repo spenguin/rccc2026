@@ -1,0 +1,15 @@
+/** Button styles */
+
+.btn {
+    text-decoration: none;
+    text-decoration: navajowhite;
+    padding: 2px 5px;
+    border: 1px solid black;
+    border-radius: .5rem;
+    &__buy-now {
+        color: black;
+        &:hover {
+            background-color: $yellowSun;
+        }
+    }
+}
