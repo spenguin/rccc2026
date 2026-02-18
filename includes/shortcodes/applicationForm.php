@@ -27,7 +27,7 @@ function applicationForm( $atts = [], $content = null, $tag = '' )
         $o      = <<<EOD
             <div class="max-wrapper__narrow">
                 <h2>Apply to Exhibit</h2>
-                <p>Rain City Comicon 2026 will be held at Croatian Cultural Centre. A full table is $125, a half table is $70.</p>
+                <p>Rain City Comicon 2026 will be held at Croatian Cultural Centre. A full table is $125, a half table is $70.</p><p>Please note: I will use your details to send you advanced notice of other events I organise, such as New West Comic Fest</p>
                 <form action="$site_url" method="post" class="max-wrapper__narrow">
                     <label for="exhibitor_name">Your name:</label>
                     <input type="text" name="exhibitor_name" placeholder="Your name" required/>
