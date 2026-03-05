@@ -1,0 +1,62 @@
+/** Navigation Styles */
+
+.menu {
+    height: calc(100% - 25px);
+    background-color: black;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    transition-duration: 0.5s;
+    &__btn_text {
+        font-variant: all-small-caps;
+        width: 98%;
+        display: flex;
+        justify-content: end;
+        cursor: pointer;
+    }
+    &__list {
+        padding-top: 2rem;
+        width: 98%;
+        padding-left: 8%;
+        max-width: 500px;
+        li {
+            border-bottom: 1px solid $lightGrey;
+            padding-bottom: 0.15rem;
+            padding-top: 0.85rem;
+            &:hover {
+                border-bottom: 1px solid white;
+            }
+            a {
+                color: $lightGrey;
+                font-family: $header-family;
+                font-size: 1.25rem;
+                text-transform: uppercase;
+                display: flex;
+                justify-content: end;
+                text-decoration: none;
+                transition: 0.25s;
+                &:hover {
+                    color: white;
+                    padding-right: 2%;
+                    transition: 0.25s;
+                }
+            }
+        }
+        &--container {
+            @include screen-greater-than( tablet )
+            {
+                display: flex;
+                justify-content: end;
+                padding-right: 2rem;
+            }
+        }
+    }
+    &.away {
+        transform: translateY(125vh);
+        transition-duration: 0.5s;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+    }
+}

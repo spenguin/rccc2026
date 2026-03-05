@@ -26,6 +26,7 @@ require_once CORE_INC . 'BlankSlate.php';
 // require_once CORE_INC . 'custom-posts.php';
 require_once CORE_INC . 'Shortcodes.php';
 require_once CORE_INC . 'tools.php'; 
+require_once CORE_INC . 'Users.php';
 
 
 
