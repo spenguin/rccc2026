@@ -1,0 +1,11 @@
+/** Exhbitors styles */
+
+.exhibitor {
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 5%;
+    &--social-media {
+        font-size: 1.75rem;
+        padding-top: 1.5rem;
+    }
+}
