@@ -27,6 +27,12 @@
                 font-size: 1rem;
                 line-height: 1.5rem;
             }
+            &.reverse {
+                color: white!important;
+                a {
+                    color: white!important;
+                }
+            }
             a {
                 color: black;
                 text-decoration: none;
@@ -41,6 +47,13 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 padding: 2%;
+                .small {
+                    font-size: 1rem;
+                    @include screen-greater-than(tablet) {
+                        font-size: 1.5rem
+                    }
+
+                }
                 & a {
                     width: 22%;
                     color: black;

@@ -483,6 +483,12 @@ ul li {
     line-height: 1.5rem;
   }
 }
+.card--list__item.reverse {
+  color: white !important;
+}
+.card--list__item.reverse a {
+  color: white !important;
+}
 .card--list__item a {
   color: black;
   text-decoration: none;
@@ -497,6 +503,14 @@ ul li {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2%;
+}
+.card--list__item--social-media .small {
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .card--list__item--social-media .small {
+    font-size: 1.5rem;
+  }
 }
 .card--list__item--social-media a {
   width: 22%;

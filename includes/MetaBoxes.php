@@ -11,6 +11,15 @@ namespace MetaBoxes;
 function initialize()
 {
     add_action('admin_init', '\MetaBoxes\admin_init');
+
+    add_action('save_post_exhibitor', '\MetaBoxes\save_twitter_handle');
+    add_action('save_post_exhibitor', '\MetaBoxes\save_instagram_handle');
+    add_action('save_post_exhibitor', '\MetaBoxes\save_tiktok_handle');
+    add_action('save_post_exhibitor', '\MetaBoxes\save_facebook_handle');
+    add_action('save_post_exhibitor', '\MetaBoxes\save_linktree_url');
+    add_action('save_post_exhibitor', '\MetaBoxes\save_website');   
+    add_action('save_post_exhibitor', '\MetaBoxes\save_bluesky_handle');  
+    add_action('save_post_panel', '\MetaBoxes\save_start_and_end_time');     
 }
 
 function admin_init()

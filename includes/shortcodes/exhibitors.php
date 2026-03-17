@@ -27,10 +27,13 @@ function exhibitors( $atts = [], $content = null, $tag = '' )
                 $twitter_handle     = get_post_meta( $query->post->ID, 'twitter_handle', TRUE ); 
                 $tiktok_handle      = get_post_meta( $query->post->ID, 'tiktok_handle', TRUE );
                 $bluesky_handle     = get_post_meta( $query->post->ID, 'bluesky_handle', TRUE );
-                $website            = get_post_meta( $query->post->ID, 'website', TRUE );            
+                $website            = get_post_meta( $query->post->ID, 'website', TRUE );  
+                $postThumbnailUrl   = get_the_post_thumbnail_url($query->post->ID);  
+                $backgroundStyle    = empty( $postThumbnailUrl ) ? '' : "background:url('" . $postThumbnailUrl . "'),linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6) ); background-size:cover;background-position:center;";
+                $backgroundClass    = empty( $postThumbnailUrl ) ? '' : ' reverse'; 
             
             ?>
-                <div class="exhibitors-single card--list__item">
+                <div class="exhibitors-single card--list__item <?php echo $backgroundClass; ?>" style=<?php echo $backgroundStyle; ?>>
                     <h3><?php echo the_title(); ?></h3>
                     <div class="card--list__item--social-media">
                         <?php if(!empty($facebook_handle)): ?>
@@ -43,7 +46,7 @@ function exhibitors( $atts = [], $content = null, $tag = '' )
                             <a href="https://x.com/<?php echo $twitter_handle; ?>" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
                         <?php endif; ?>    
                         <?php if(!empty($bluesky_handle)): ?>
-                            <a href="https://bsky.app/profile/<?php echo $bluesky_handle; ?>" target="_blank">bSky</a>
+                            <a href="https://bsky.app/profile/<?php echo $bluesky_handle; ?>" class="small" target="_blank">bSky</a>
                         <?php endif; ?>                                                            
                         <?php if(!empty($tiktok_handle)): ?>
                             <a href="https://tiktok.com/<?php echo $tiktok_handle; ?>" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
