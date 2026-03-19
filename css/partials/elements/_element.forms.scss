@@ -1,0 +1,41 @@
+/** Form styles */
+
+form {
+    border: 2px solid black;
+    border-radius: $formRadius;
+    padding: 1.25rem;
+    label {
+        font-weight: 600;
+    }
+    input {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 10px;
+        margin-bottom: 1.5rem;
+        padding: 16px 24px;
+        // width: 90%;
+        height: 15%;
+        left: 1048px;
+        top: 16px;
+        background: #FFFFFF;
+        border: 2px solid #1B1B1B;
+        box-sizing: border-box;
+        border-radius: 16px;
+        transition: 0.2s;
+        &[type=radio] {
+            width: inherit;
+            display: inline;
+        }
+
+        &[type=submit] {
+            background-color: $goldenSun;
+            font-size: 1.25rem;
+            &:hover {
+                background-color: $paleYellow;
+            }
+        }
+
+    }
+}
