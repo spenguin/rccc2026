@@ -30,6 +30,8 @@ require_once CORE_INC . 'Users.php';
 require_once CORE_INC . 'CustomPosts.php';
 require_once CORE_INC . 'MetaBoxes.php';
 
+require_once CORE_INC . 'sponsorFns.class.php';
+
 
 
 

@@ -3,7 +3,7 @@
     background-color: black;
     padding: 1.5rem 5%;
     color: $paleYellow;
-    height: 125px;
+    min-height: 125px;
     &--wrapper {
         @include screen-greater-than(tablet) {
             display: flex;

@@ -161,6 +161,56 @@ function custom_post_type()
 
     // Registering Custom Post Type Blogs
     register_post_type('exhibitor', $args);    
+
+    // Set UI labels for Custom Post Type Sponsor
+    $labels = array(
+        'name'                => _x('Exhibitors', 'Post Type General Name', 'rcc'),
+        'singular_name'       => _x('Sponsors', 'Post Type Singular Name', 'rcc'),
+        'menu_name'           => __('Sponsors', 'rcc'),
+        'parent_item_colon'   => __('Parent Sponsor', 'rcc'),
+        'all_items'           => __('All Sponsors', 'rcc'),
+        'view_item'           => __('View Sponsor', 'rcc'),
+        'add_new_item'        => __('Add New Sponsor', 'rcc'),
+        'add_new'             => __('Add New', 'rcc'),
+        'edit_item'           => __('Edit Sponsor', 'rcc'),
+        'update_item'         => __('Update Sponsor', 'rcc'),
+        'search_items'        => __('Search Sponsor', 'rcc'),
+        'not_found'           => __('Not Found', 'rcc'),
+        'not_found_in_trash'  => __('Not found in Trash', 'rcc'),
+    );
+
+    // Set other options for Custom Post Type
+    $args = array(
+        'label'               => __('sponsor', 'rcc'),
+        'description'         => __('Sponsors listings', 'rcc'),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array('title', 'editor', 'thumbnail', 'excerpt'),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array('line'),
+        'rewrite' => array('slug' => 'sponsor', 'with_front' => false),
+        /* A hierarchical CPT is like Pages and can have
+		* Parent and child items. A non-hierarchical CPT
+		* is like Posts.
+		*/
+        'hierarchical'        => true,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 15,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+        'show_in_rest'        => TRUE
+
+    );
+
+    // Registering Custom Post Type Blogs
+    register_post_type('sponsor', $args);      
 }
 
 function custom_taxonomy_type()

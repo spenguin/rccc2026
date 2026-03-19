@@ -2,6 +2,7 @@
             <?php // get_sidebar(); ?>
         </div>
         <footer id="footer" role="contentinfo" class="footer">
+            <?php sponsorFns::listSponsors(); ?>
             <div class="footer--wrapper max-wrapper__narrow">
                 <div id="copyright">
                     &copy; <?php echo esc_html( date_i18n( __( 'Y', 'blankslate' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?> <!--| Posters &copy; their individual creators-->
