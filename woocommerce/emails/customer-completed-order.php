@@ -22,6 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $email_improvements_enabled = FeaturesUtil::feature_is_enabled( 'email_improvements' );
+echo '<p><img src="<?php echo CORE_TEMPLATE_URL ?>/assets/furniture/RainCloudLogo.png" style="width:150px;"/></p>';
+
 
 /*
  * @hooked WC_Emails::email_header() Output the email header

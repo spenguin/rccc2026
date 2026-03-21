@@ -30,6 +30,7 @@ $email_improvements_enabled = FeaturesUtil::feature_is_enabled( 'email_improveme
  * @hooked WC_Emails::email_header() Output the email header
  */
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
+<p><img src="<?php echo CORE_TEMPLATE_URL ?>/assets/furniture/RainCloudLogo.png" style="width:150px;"/></p>
 
 <?php echo $email_improvements_enabled ? '<div class="email-introduction">' : ''; ?>
 <p>
