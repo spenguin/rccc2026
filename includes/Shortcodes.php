@@ -11,6 +11,7 @@ require_once CORE_SHORTCODE . 'countdown.php';
 require_once CORE_SHORTCODE . 'headerText.php';
 require_once CORE_SHORTCODE . 'applicationForm.php';
 require_once CORE_SHORTCODE . 'tables.php';
+require_once CORE_SHORTCODE . 'testimonials.php';
 
 
 \Shortcodes\initialize();
@@ -25,4 +26,5 @@ function initialize()
     // add_shortcode( 'rcc_panels', '\rcc_panels' );
     // add_shortcode( 'rcc_posters', '\rcc_posters' );
     add_shortcode( 'exhibitors', '\exhibitors' );
+    add_shortcode( 'testimonials', '\testimonials' );
 }

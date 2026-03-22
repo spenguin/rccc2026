@@ -5,4 +5,9 @@ p {
     margin-bottom: 0.85rem;
     font-size: 1.25rem;
     line-height: 1.5rem;
+    &.credit {
+        display: flex;
+        justify-content: end;
+        font-style: italic;
+    }
 }

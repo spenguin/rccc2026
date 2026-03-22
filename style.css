@@ -334,6 +334,11 @@ p {
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
+p.credit {
+  display: flex;
+  justify-content: end;
+  font-style: italic;
+}
 
 /** List styles */
 ul {
@@ -540,6 +545,11 @@ ul li {
 .exhibitor--social-media {
   font-size: 1.75rem;
   padding-top: 1.5rem;
+}
+
+/** Testimonials styles */
+.testimonials__item {
+  padding: 0.5rem 2.75rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

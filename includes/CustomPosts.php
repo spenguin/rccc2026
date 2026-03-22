@@ -164,8 +164,8 @@ function custom_post_type()
 
     // Set UI labels for Custom Post Type Sponsor
     $labels = array(
-        'name'                => _x('Exhibitors', 'Post Type General Name', 'rcc'),
-        'singular_name'       => _x('Sponsors', 'Post Type Singular Name', 'rcc'),
+        'name'                => _x('Sponsors', 'Post Type General Name', 'rcc'),
+        'singular_name'       => _x('Sponsor', 'Post Type Singular Name', 'rcc'),
         'menu_name'           => __('Sponsors', 'rcc'),
         'parent_item_colon'   => __('Parent Sponsor', 'rcc'),
         'all_items'           => __('All Sponsors', 'rcc'),
@@ -210,7 +210,58 @@ function custom_post_type()
     );
 
     // Registering Custom Post Type Blogs
-    register_post_type('sponsor', $args);      
+    register_post_type('sponsor', $args);   
+    
+    
+    // Set UI labels for Custom Post Type Testimonial
+    $labels = array(
+        'name'                => _x('Testimonials', 'Post Type General Name', 'rcc'),
+        'singular_name'       => _x('Testimonial', 'Post Type Singular Name', 'rcc'),
+        'menu_name'           => __('Testimonials', 'rcc'),
+        'parent_item_colon'   => __('Parent Testimonial', 'rcc'),
+        'all_items'           => __('All Testimonials', 'rcc'),
+        'view_item'           => __('View Testimonial', 'rcc'),
+        'add_new_item'        => __('Add New Testimonial', 'rcc'),
+        'add_new'             => __('Add New', 'rcc'),
+        'edit_item'           => __('Edit Testimonial', 'rcc'),
+        'update_item'         => __('Update Testimonial', 'rcc'),
+        'search_items'        => __('Search Testimonial', 'rcc'),
+        'not_found'           => __('Not Found', 'rcc'),
+        'not_found_in_trash'  => __('Not found in Trash', 'rcc'),
+    );
+
+    // Set other options for Custom Post Type
+    $args = array(
+        'label'               => __('testimonial', 'rcc'),
+        'description'         => __('Testimonials listings', 'rcc'),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array('title', 'editor', 'thumbnail', 'excerpt'),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array('line'),
+        'rewrite' => array('slug' => 'testimonial', 'with_front' => false),
+        /* A hierarchical CPT is like Pages and can have
+		* Parent and child items. A non-hierarchical CPT
+		* is like Posts.
+		*/
+        'hierarchical'        => true,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 15,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+        'show_in_rest'        => TRUE
+
+    );
+
+    // Registering Custom Post Type Blogs
+    register_post_type('testimonial', $args);    
 }
 
 function custom_taxonomy_type()
