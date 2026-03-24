@@ -8,4 +8,24 @@
         font-size: 1.75rem;
         padding-top: 1.5rem;
     }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include screen-greater-than( tablet ){
+            flex-direction: row;
+        }
+    }
+    &__image {
+        width: 300px;
+        // margin-right: 2rem;
+        @include screen-greater-than( tablet ){
+            margin-right: 2rem;
+            width: auto;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }

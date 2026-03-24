@@ -546,6 +546,29 @@ ul li {
   font-size: 1.75rem;
   padding-top: 1.5rem;
 }
+.exhibitor__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .exhibitor__wrapper {
+    flex-direction: row;
+  }
+}
+.exhibitor__image {
+  width: 300px;
+}
+@media screen and (min-width: 768px) {
+  .exhibitor__image {
+    margin-right: 2rem;
+    width: auto;
+  }
+}
+.exhibitor__image img {
+  width: 100%;
+  height: auto;
+}
 
 /** Testimonials styles */
 .testimonials__item {
