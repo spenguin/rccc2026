@@ -575,4 +575,11 @@ ul li {
   padding: 0.5rem 2.75rem 0;
 }
 
+/** Style Sponsors */
+.sponsor-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 /*# sourceMappingURL=style.css.map */
