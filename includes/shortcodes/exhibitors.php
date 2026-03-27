@@ -29,11 +29,11 @@ function exhibitors( $atts = [], $content = null, $tag = '' )
                 $bluesky_handle     = get_post_meta( $query->post->ID, 'bluesky_handle', TRUE );
                 $website            = get_post_meta( $query->post->ID, 'website', TRUE );  
                 $postThumbnailUrl   = get_the_post_thumbnail_url($query->post->ID);  
-                $backgroundStyle    = empty( $postThumbnailUrl ) ? '' : "background:url('" . $postThumbnailUrl . "'),linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6) ); background-size:cover;background-position:center;";
+                $backgroundStyle    = empty( $postThumbnailUrl ) ? '' : "background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('" . $postThumbnailUrl . "'); background-size:cover;background-position:center;";
                 $backgroundClass    = empty( $postThumbnailUrl ) ? '' : ' reverse'; 
             
             ?>
-                <div class="exhibitors-single card--list__item <?php echo $backgroundClass; ?>" style=<?php echo $backgroundStyle; ?>>
+                <div class="exhibitors-single card--list__item <?php echo $backgroundClass; ?>" style="<?php echo $backgroundStyle; ?>">
                     <h3><?php echo the_title(); ?></h3>
                     <div class="card--list__item--social-media">
                         <?php if(!empty($facebook_handle)): ?>
