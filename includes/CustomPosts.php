@@ -293,4 +293,18 @@ function custom_taxonomy_type()
         'hierarchical'  => FALSE
         ]
     );
+
+    register_taxonomy(
+        'panel-event',
+        'panel',
+        ['labels'       => [
+            'name'          => 'Event',
+            'add_new_item'  => 'Add New Event',
+            'new_item_name' => 'New Event'
+        ],
+        'show_ui'       => TRUE,
+        'show_tagcloud' => FALSE,
+        'hierarchical'  => FALSE
+        ]
+    );
 }

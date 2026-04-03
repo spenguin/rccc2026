@@ -582,4 +582,19 @@ ul li {
   flex-wrap: wrap;
 }
 
+/** Panels styles */
+.panel {
+  margin-left: -5%;
+  margin-right: -5%;
+  padding: 5%;
+  border-bottom: 1px solid #fab03c;
+}
+.panel:nth-child(even) {
+  background-color: #cccccc;
+}
+.panel__time {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */

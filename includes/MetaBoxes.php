@@ -18,7 +18,8 @@ function initialize()
     add_action('save_post_exhibitor', '\MetaBoxes\save_facebook_handle');
     add_action('save_post_exhibitor', '\MetaBoxes\save_linktree_url');
     add_action('save_post_exhibitor', '\MetaBoxes\save_website');   
-    add_action('save_post_exhibitor', '\MetaBoxes\save_bluesky_handle');  
+    add_action('save_post_exhibitor', '\MetaBoxes\save_bluesky_handle'); 
+    
     add_action('save_post_panel', '\MetaBoxes\save_start_and_end_time');     
 }
 
@@ -31,6 +32,7 @@ function admin_init()
     add_meta_box('bluesky_handle_meta', 'Bluesky handle', '\MetaBoxes\bluesky_handle', 'exhibitor', 'side');
     add_meta_box('linktree_url_meta', 'Linktree URL', '\MetaBoxes\linktree_url', 'exhibitor', 'side');
     add_meta_box('website_meta', 'Website', '\MetaBoxes\website', 'exhibitor', 'side');
+
     add_meta_box('start_and_end_time_meta', 'Start and End Time', '\MetaBoxes\start_and_end_time', 'panel', 'side' );
 }
 
